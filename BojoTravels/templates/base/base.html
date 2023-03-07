@@ -1,0 +1,195 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Bootstrap CSS -->
+  <link href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'css/booking.css' %}">
+  <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+   <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+
+    <title>Home</title>
+  </head>
+
+  <body>
+     <!-- -----------navbar-------------- -->
+        <header>
+      <div class="bg-color bojo-container">
+          <div class="bojonavbar  " id="here">
+              <!-- ------------navbar 1------------ -->
+              <nav class="upper-nav d-flex justify-content-between  ">
+                  <div class="d-flex ">
+                      <a href="#" >Terms and conditions</a>
+                      <a href="#">FAQ</a>
+                      <a href="#" class="drop-new-items">About us</a>
+                      <a href="/contact" class="drop-new-items">Contact</a>
+                  </div>
+                  <div class="flex justify-content-between">
+                      <a href="#">
+                          <i class="bi bi-telephone-fill"></i>
+                          <span>+91 76651 67316</span>    
+                      </a>
+                      <a href="#">
+                          <i class="bi bi-envelope-fill"></i>
+                          <span>Enquire</span>
+                      </a>
+                  </div>
+              </nav>
+
+              <!-- ------------navbar 2 ------------ -->
+
+              <nav class="main-nav d-flex justify-content-between ">
+                  <a href='/'class="d-flex ">
+                      <i class="bi bi-sunset-fill bojo-logo "></i>
+                      <span><h1>BOJO TRAVELS</h1></span>
+                  </a>
+
+                  <div class="d-flex justify-content-around menu-list">
+                      <a href="#" class="text-uppercase"><b>adventures</b></a>
+                      <a href="/gallery" class="text-uppercase"><b>Gallery</b></a>
+                      <a href="booking.html"  class="text-uppercase">
+                          <b>Checkout</b>
+                          <i class="bi bi-cart-fill"></i>
+                      </a>
+                  </div>
+                  <div class="toggle-btn">
+                      <i class="bi bi-slack"></i>
+                  </div>
+              </nav>
+
+              <!--  -- drop down  -->
+              <div class="dropdown_menu ">
+                  <a href="#" class="text-uppercase"><b>adventures</b></a>
+                  <a href="/gallery" class="text-uppercase"><b>Gallery</b></a>
+                  <a href="#"  class="text-uppercase">
+                      <b>Checkout</b>
+                      <i class="bi bi-cart-fill"></i>
+                  </a>
+                  <a href="#" class="text-uppercase"><b>about us</b></a>
+                  <a href="#" class="text-uppercase"><b>contact</b></a>
+              </div>
+          </div>
+      </div>
+    </header>
+
+  
+   
+    {% block maincontent %} {% endblock %}
+
+    <!-- ---------------------------- footor --------------------------- -->
+    <footer class="footer text-light bgdark p-3">
+      <div class="subscribe-now line">
+  
+        <div class="container">
+            <div class="row">
+              <div class="col">
+                <h1>Bojo Travels.</h1>
+              </div>
+              <div class="col">
+              </div>
+          </div>
+  
+          <div class="container pt-3">
+            <div class="input-group mb-3 w-25 ">
+              
+            </div>
+          </div>
+          <div class="row justify-content-between">
+            <div class="col-lg-5 col-md-6">
+              <div class="subscribe-newsletter">
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-3">
+              <div class="language">
+                <form method="post" enctype="multipart/form-data" id="form-language">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+            <p>Landline : +91 011 42654565<br>
+              Mobile & Whatsapp : +91 8800740030<br>
+              E-mail 2 : bojo@gmail.com<br>
+              Skype : bojo.goto</p>
+          </div>
+          <div class="col-md-3 col-sm-12 col-xs-12">
+            <div class="link-title">
+              <h4>About Bojo</h4>
+              <hr>
+              <ul class="links">
+                <li><a>About Us</a></li>
+                <li><a>Careers</a></li>
+                <li><a>Blog</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+            <div class="link-title">
+              <h4> Services </h4>
+              <hr>
+              <ul class="links">
+                <li><a>text</a></li>
+                <li><a>text</a></li>
+                <li><a>text</a></li>
+                <li><a>text</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+            <div class="link-title">
+              <h4>Partner With Us</h4>
+              <hr>
+              <ul class="links">
+                <li><a>text</a></li>
+                <li><a>text</a></li>
+                <li><a>text</a></li>
+                <li><a>text</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </footer>
+    
+    <div class="card-footer bgfooter ">
+        <div class="text-light fs-6 p-2 container">
+          <div class="row">
+            <div class="col ps-0 text-muted">
+              2023 Copyright. All Rights Reserved by bojotravels.
+            </div>
+            <div class="col pe-0 text-end">
+              <i class="bi bi-whatsapp m-2"></i>
+              <i class="bi bi-instagram m-2"></i>
+              <i class="bi bi-facebook m-2"></i>
+              <i class="bi bi-youtube m-2"></i>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <!-- footer ed -->
+    {% comment %} <script src=""></script> {% endcomment %}
+    
+    <!-- ------------------SCRIPTS --------------------- -->
+    <script src="../m"></script>
+
+   
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</html>

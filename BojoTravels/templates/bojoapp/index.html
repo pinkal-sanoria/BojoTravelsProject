@@ -1,0 +1,350 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block maincontent %}
+<body >
+    <div >
+       
+        <!-- ----------- text  --------------- -->
+        <div class="text-header position-absolute main-text row ">
+            <div class="margin-text col">
+                <div>
+                    <h1 class="text-uppercase "><span class="text-spam-blue">DHARAMSHALA</span> tours and ADVANTURES holidays</h1>
+                </div>
+                <div class="m-4">
+                    <h2 class="text-uppercase">"let me discribe you dharamshala"<u>ADVANTURES</u></h2>
+                </div>
+                <div class="book-btn">
+                    <button type="button" class="btn text-uppercase"><b> Book Now</b></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ----------- carousel ------------ -->
+        <div id="carouselExampleFade " class="carousel  slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner ">
+              <div class="carousel-item active">
+                <img src="../../static/media/images/main.JPG"  alt="..." class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../../static/media/images/slider_image2.jpeg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../../static/media/images/slider_image2.jpeg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+        </div>
+
+
+        <!-- ------------home features --------- -->
+        <section class="bojo-container-home text-uppercase" >   
+
+            <div class="next-section">
+                <div class=" text-header">
+                    <div class=" box-container margin-text services-cards ">
+                        
+                        <div class='box'>
+                            <div class="card" >
+                                <i class="bi bi-file-image-fill"></i>
+                                <div class="card-body">
+                                    <p class="card-text-hero">40+ ADVANTURES available</p>
+                                    <h4>great selection of tours</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='box'>
+                            <div class="card " >
+                                <i class="bi bi-shield-fill-check"></i>
+                                <div class="card-body">
+                                    <p class="card-text-hero">Plan your holidays safely</p>
+                                    <h4>Full refund guarantee</h4>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class='box'>
+                            <div class="card" >
+                                <i class="bi bi-file-earmark-lock2-fill"></i>
+                                <div class="card-body">
+                                    <p class="card-text-hero">secure payment</p>
+                                    <h4>fast and secure payment</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='box'>
+                            <div class="card" >
+                                <i class="bi bi-people-fill"></i>
+                                <div class="card-body">
+                                    <p class="card-text-hero">small groups</p>
+                                    <h4>small group experience guarantee</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='box'>
+                            <div class="card" >
+                                <i class="bi bi-calendar2-week-fill"></i>
+                                <div class="card-body">
+                                    <p class="card-text-hero">scheduled daily departures</p>
+                                    <h4>TRAVELS await</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='box'>
+                            <div class="card" >
+                                <i class="bi bi-currency-exchange"></i>
+                                <div class="card-body">
+                                    <p class="card-text-hero">online booking system</p>
+                                    <h4>instant booking and conformation</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ----------- flip cards about tours ----------- -->
+        <section class="bojo-container text-uppercase" >   
+            <div class="heading m-5">
+				<span class="">Our Best Dharamshala Tour Packages</span>
+				<h1 >Nature’s Wellness Dharamshala Packages</h1>
+			</div>
+
+            <div class="packages-elements column">
+                <!-- new cart -->
+                {% comment %} <div class="container py-5"> {% endcomment %}
+                    <div class="box-container">
+                        <div class="box">
+                            <div class="card h-100">
+                                <figure><img src="../../static/media/images/slider_image1.jpeg" class="card-img-top" alt="..."></figure>
+                                <!-- <div class="img_btn">
+                                    <p>
+                                        <span>From</span> $ 895
+                                    </p>
+                                </div> -->
+                                <div class="card-body">
+                                    <h3 class="card-title">Triund Trek</h3>
+                                    <span class="card-text">
+                                        Triund Trek is one of the most beautiful places for its lifestyle based on nature mainly. We have Eco-tourism is another attraction
+                                    </span>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                        <div class="col border-end"><i class="bi bi-stopwatch text-danger"></i> 2 Days</div>
+                                        <div class="col border-end "><i class="bi bi-hand-thumbs-up text-danger"></i> 4.3/5</div>
+                                        <div class="col "><a href="/booking" class="text-danger"><b>Read More</b></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="box">
+                            <div class="card h-100">
+                            <figure><img src="../../static/media/images/slider_image1.jpeg" class="card-img-top" alt="..."></figure>
+                                <div class="card-body">
+                                    <h3 class="card-title">Triund Trek</h3>
+                                    <span class="card-text">Triund Trek is one of the most beautiful places for its lifestyle based on nature mainly. We have Eco-tourism is another attraction.</span>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                    <div class="col border-end"><i class="bi bi-stopwatch text-danger"></i> 2 Days</div>
+                                    <div class="col border-end "><i class="bi bi-hand-thumbs-up text-danger"></i> 4.3/5</div>
+                                    <div class="col text-danger"><a href="/booking" class="text-danger"><b>Read More</b></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="box">
+                            <div class="card h-100">
+                            <figure><img src="../../static/media/images/slider_image1.jpeg" class="card-img-top" alt="..."></figure>
+                                <div class="card-body">
+                                    <h3 class="card-title">Triund Trek</h3>
+                                    <span class="card-text">
+                                        Triund Trek is one of the most beautiful places for its lifestyle based on nature mainly. We have Eco-tourism is another attraction.
+                                    </span>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                    <div class="col border-end"><i class="bi bi-stopwatch text-danger"></i> 2 Days</div>
+                                    <div class="col border-end "><i class="bi bi-hand-thumbs-up text-danger"></i> 4.3/5</div>
+                                    <div class="col text-danger"><a href="/booking" class="text-danger"><b>Read More</b></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="card h-100">
+                                <figure><img src="../../static/media/images/slider_image1.jpeg" class="card-img-top" alt="..."></figure>
+                                <div class="card-body">
+                                    <h3 class="card-title">Triund Trek</h3>
+                                    <span class="card-text">
+                                        Triund Trek is one of the most beautiful places for its lifestyle based on nature mainly. We have Eco-tourism is another attraction.
+                                    </span>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                    <div class="col border-end"><i class="bi bi-stopwatch text-danger"></i> 2 Days</div>
+                                    <div class="col border-end "><i class="bi bi-hand-thumbs-up text-danger"></i> 4.3/5</div>
+                                    <div class="col text-danger"><a href="/booking" class="text-danger"><b>Read More</b></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="card h-100">
+                            <figure><img src="../../static/media/images/slider_image1.jpeg" class="card-img-top" alt="..."></figure>
+                                <div class="card-body">
+                                    <h3 class="card-title">Triund Trek</h3>
+                                    <span class="card-text">
+                                        Triund Trek is one of the most beautiful places for its lifestyle based on nature mainly. We have Eco-tourism is another attraction.
+                                    </span>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                    <div class="col border-end"><i class="bi bi-stopwatch text-danger"></i> 2 Days</div>
+                                    <div class="col border-end "><i class="bi bi-hand-thumbs-up text-danger"></i> 4.3/5</div>
+                                    <div class="col text-danger"><a href="/booking" class="text-danger"><b>Read More</b></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="card h-100">
+                            <figure><img src="../../static/media/images/slider_image1.jpeg" class="card-img-top" alt="..."></figure>
+                                <div class="card-body">
+                                    <h3 class="card-title">Triund Trek</h3>
+                                    <span class="card-text">
+                                        Triund Trek is one of the most beautiful places for its lifestyle based on nature mainly. We have Eco-tourism is another attraction.
+                                    </span>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                    <div class="col border-end"><i class="bi bi-stopwatch text-danger"></i> 2 Days</div>
+                                    <div class="col border-end "><i class="bi bi-hand-thumbs-up text-danger"></i> 4.3/5</div>
+                                    <div class="col text-danger"><a href="/booking" class="text-danger"><b>Read More</b></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% comment %} </div> {% endcomment %}
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- ------------------- gallery --------------- -->
+		<section class="gallery text-uppercase" id="gallery">
+
+			<div class="heading">
+				<span>our gallery</span>
+				<h1>we record memories</h1>
+			</div>
+			
+			<div class="box-container">
+                
+				<div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+					<img src="../../static/media/images/slider_image1.jpeg" alt="">
+					<span>travel spot</span>
+					<h3>iceland</h3>
+				</div>
+
+				<div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+					<img src="../../static/media/images/gallery-img-2.jpg" alt="">
+					<span>travel spot</span>
+					<h3>greenland</h3>
+				</div>
+
+				<div class="box" data-aos="zoom-in-up" data-aos-delay="450">
+					<img src="../../static/media/images/gallery-img-3.jpg" alt="">
+					<span>travel spot</span>
+					<h3>alaska</h3>
+				</div>
+
+				<div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+					<img src="../../static/media/images/gallery-img-4.jpg" alt="">
+					<span>travel spot</span>
+					<h3>thailand</h3>
+				</div>
+
+				<div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+					<img src="../../static/media/images/gallery-img-5.jpg" alt="">
+					<span>travel spot</span>
+					<h3>brazil</h3>
+				</div>
+
+			</div>
+
+		</section>
+        
+        
+        <!-- ------------- Reviews ---------------- -->
+        <section class="  bojo-container text-uppercase " id='review' >
+                <div class="heading">
+                    <span >Happy Clients</span>
+                    <h1 >Source: Google Reviews</h1>
+                </div>
+            {% comment %} <div class="container "> {% endcomment %}
+                <div class="text-center box-container">
+                    <div class="box">
+                        <div class="card p-4 ">
+                            <div  >
+                                <i class="bi bi-chat-right-quote-fill main_color " style="font-size: 50px;"> </i>
+                                <h3 class="card-title">Pinkal Sanoria</h3>
+                            </div>
+                            <div class="card-body">
+                                <span class="card-text text-muted"><b> I am Working with the travel company, specifically our travel planner, was fantastic. I truly recommend 👍</b></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="card p-4 ">
+                            <div  >
+                                <i class="bi bi-chat-right-quote-fill main_color " style="font-size: 50px;"> </i>
+                                <h3 class="card-title">Samir Singh</h3>
+                            </div>
+                            <div class="card-body">
+                                <span class="card-text text-muted"><b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus officiis facilis numquam tenetur aperiam cum blanditiis velit est corporis pariatur explicabo culpa architecto ratione fugiat neque impedit voluptatem, sed, iusto autem odit totam quam cumque nam. Temporibus excepturi esse distinctio ex qui omnis sint! This travel has supporting company as my Best travel agency ♥️</b></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="card p-4">
+                            <div >
+                                <i class="bi bi-chat-right-quote-fill main_color " style="font-size: 50px;"> </i>
+                                <h3 class="card-title">Rahul Verma</h3>
+                            </div>
+                            <div class="card-body">
+                                <span class="card-text text-muted"><b> We highly recommend Leben Travels And Tours. natural This  first to show that equal height action.</b></span>
+                            </div>
+                        </div>
+                    </div>
+                {% comment %} </div> {% endcomment %}
+            </div>
+        </section>
+        
+
+                <!-- end new cart -->
+              {% comment %} <div class="icon_float">
+                <a href="https://api.whatsapp.com/send?phone=918352997006&text=Hello Bojotravels, I want to know more about this?" target="_blank" ><img src="../../static/media/images/whatsapp.png" width="50px" class="whatsapp_float_btn"/></a>
+                
+                <a href="https://www.facebook.com/" target="_blank"><img src="../../static/media/images/fb.png" width="50px" class="facebook_float_btn"/></a>
+                
+                <a href="https://www.instagram.com/bojotravels/" target="_blank"><img src="../../static/media/images/insta.png" width="50px" class="instagram_float_btn"/></a>
+              </div> {% endcomment %}
+        {% comment %} </div> {% endcomment %}
+
+
+    </div>
+    
+
+
+    <!-- ------------------SCRIPTS --------------------- -->
+    <script src="./components/script.js"></script>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+{% comment %} </body>
+</html> {% endcomment %}
+
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block maincontent %}
+
+        <div class=" text-center pb-5 " id="contact-section">
+            <p class="text-light fw-bold centered">Contact With Us</p>
+        </div>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col col-md-12 col-lg-6 shadow p-5 mb-5 bg-body rounded">
+                    <p class="fs-2">Let's talk</p>
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputname" class="form-label">Full name</label>
+                            <input type="text" class="form-control" id="exampleInputname">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPhone" class="form-label">Phone</label>
+                            <input type="text" class="form-control" id="exampleInputPhone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="exampleInputEmail1"
+                                aria-describedby="emailHelp"
+                            >
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputMessages" class="form-label">Messages</label>
+                            <textarea
+                                class="form-control"
+                                rows="5"
+                                id="messages"
+                                name="text"
+                            ></textarea>
+                        </div>
+                        <div class="text-end">
+                            <button type="submit" class="btn btn-success end-0">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col px-5">
+                    <div class="col">
+                        <div class="panel-widget-style panel-widget-style-for-229-1-0-0">
+                            <div class="so-widget-sow-editor so-widget-sow-editor-base">
+                                <div class="siteorigin-widget-tinymce textwidget pb-5">
+                                    <h1>Himalayan Heights&nbsp; Adventure</h1>
+                                    <h5>75 Mcleodganj, Dharamshala, Distt. Kangra,
+                                        <br>
+                                        Himachal Pradesh-176210 - INDIA
+                                    </h5>
+                                    <p>
+                                        <strong>Call</strong> : +91-8768868975 | +91-4543338754&nbsp; |+91-084533328
+                                    </p>
+                                    <p>
+                                        <strong>Email</strong> : bojoadventure@gmail.com
+                                        <br>
+                                        contact.bojoa@gmail.com
+                                    </p>
+                                    <p>
+                                        <strong>Web</strong> : bojodventure.com
+        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div id="" class="z-depth-1-half map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3374.83414492182!2d76.3250603147896!3d32.235631981138866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b56d4dc504c89%3A0xb97ac53d5819d7ce!2sHimalayan%20Heights%20Adventure!5e0!3m2!1sen!2sin!4v1588006445424!5m2!1sen!2sin" frameborder="0"
+                              style="border:0; width: 100% !important; height: 25rem !important;" allowfullscreen></iframe>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <link rel="stylesheet" href="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js">
+    
+{% endblock %}
