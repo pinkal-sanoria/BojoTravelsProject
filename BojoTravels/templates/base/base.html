@@ -24,8 +24,7 @@
   <body>
      <!-- -----------navbar-------------- -->
         <header>
-      <div class="bg-color bojo-container">
-          <div class="bojonavbar  " id="here">
+          <div class="bojonavbar" >
               <!-- ------------navbar 1------------ -->
               <nav class="upper-nav d-flex justify-content-between  ">
                   <div class="d-flex ">
@@ -53,11 +52,10 @@
                       <i class="bi bi-sunset-fill bojo-logo "></i>
                       <span><h1>BOJO TRAVELS</h1></span>
                   </a>
-
                   <div class="d-flex justify-content-around menu-list">
                       <a href="#" class="text-uppercase"><b>adventures</b></a>
                       <a href="/gallery" class="text-uppercase"><b>Gallery</b></a>
-                      <a href="booking.html"  class="text-uppercase">
+                      <a href="/booking"  class="text-uppercase">
                           <b>Checkout</b>
                           <i class="bi bi-cart-fill"></i>
                       </a>
@@ -67,7 +65,7 @@
                   </div>
               </nav>
 
-              <!--  -- drop down  -->
+              <!--  drop down  -->
               <div class="dropdown_menu ">
                   <a href="#" class="text-uppercase"><b>adventures</b></a>
                   <a href="/gallery" class="text-uppercase"><b>Gallery</b></a>
@@ -79,7 +77,6 @@
                   <a href="#" class="text-uppercase"><b>contact</b></a>
               </div>
           </div>
-      </div>
     </header>
 
   
@@ -87,85 +84,44 @@
     {% block maincontent %} {% endblock %}
 
     <!-- ---------------------------- footor --------------------------- -->
-    <footer class="footer text-light bgdark p-3">
-      <div class="subscribe-now line">
+    <section class="footer">
+
+      <div class="box-container">
   
-        <div class="container">
-            <div class="row">
-              <div class="col">
-                <h1>Bojo Travels.</h1>
-              </div>
-              <div class="col">
+          <div class="box" data-aos="fade-up" data-aos-delay="150">
+              <a href="#" class="logo"> <i class="fas fa-paper-plane"></i>Bojo travel </a>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, ad?</p>
+              <div class="share">
+                  <a href="#" class="fab fa-facebook-f"></a>
+                  <a href="#" class="fab fa-twitter"></a>
+                  <a href="#" class="fab fa-instagram"></a>
+                  <a href="#" class="fab fa-linkedin"></a>
               </div>
           </div>
   
-          <div class="container pt-3">
-            <div class="input-group mb-3 w-25 ">
-              
-            </div>
+          <div class="box" data-aos="fade-up" data-aos-delay="300">
+              <h3>quick links</h3>
+              <a href="/index" class="links"> <i class="fas fa-arrow-right"></i> home </a>
+              <a href="/gallery" class="links"> <i class="fas fa-arrow-right"></i> adventures </a>
+              <a href="/gallery" class="links"> <i class="fas fa-arrow-right"></i> gallery </a>
+              <a href="/gallery" class="links"> <i class="fas fa-arrow-right"></i> about</a>
+              <a href="/contact" class="links"> <i class="fas fa-arrow-right"></i> contact </a>
+              <a href="/booking" class="links"> <i class="fas fa-arrow-right"></i> more</a>
           </div>
-          <div class="row justify-content-between">
-            <div class="col-lg-5 col-md-6">
-              <div class="subscribe-newsletter">
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-3">
-              <div class="language">
-                <form method="post" enctype="multipart/form-data" id="form-language">
-                </form>
-              </div>
-            </div>
+  
+          <div class="box" data-aos="fade-up" data-aos-delay="450">
+              <h3>contact info</h3>
+              <p> <i class="fas fa-map"></i> mumbai, india </p>
+              <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
+              <p> <i class="fas fa-envelope"></i> shaikhanas@gmail.com </p>
+              <p> <i class="fas fa-clock"></i> 7:00am - 10:00pm </p>
           </div>
-        </div>
+
+  
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
-            <p>Landline : +91 011 42654565<br>
-              Mobile & Whatsapp : +91 8800740030<br>
-              E-mail 2 : bojo@gmail.com<br>
-              Skype : bojo.goto</p>
-          </div>
-          <div class="col-md-3 col-sm-12 col-xs-12">
-            <div class="link-title">
-              <h4>About Bojo</h4>
-              <hr>
-              <ul class="links">
-                <li><a>About Us</a></li>
-                <li><a>Careers</a></li>
-                <li><a>Blog</a></li>
-                <li><a>Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
-            <div class="link-title">
-              <h4> Services </h4>
-              <hr>
-              <ul class="links">
-                <li><a>text</a></li>
-                <li><a>text</a></li>
-                <li><a>text</a></li>
-                <li><a>text</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
-            <div class="link-title">
-              <h4>Partner With Us</h4>
-              <hr>
-              <ul class="links">
-                <li><a>text</a></li>
-                <li><a>text</a></li>
-                <li><a>text</a></li>
-                <li><a>text</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </footer>
+  
+  </section>
+  
     
     <div class="card-footer bgfooter ">
         <div class="text-light fs-6 p-2 container">

@@ -2,83 +2,21 @@
 {% load static %}
 {% block maincontent %}
 
-    <div > 
-        <!-- -----------navbar-------------- -->
-        <header>
-            <div class="bg-color">
-                <div class="bojonavbar  " id="here">
-                    <!-- ------------navbar 1------------ -->
-                    <nav class="upper-nav d-flex justify-content-between  ">
-                        <div class="d-flex ">
-                            <a href="#" >Terms and conditions</a>
-                            <a href="#">FAQ</a>
-                            <a href="#" class="drop-new-items">About us</a>
-                            <a href="/contact" class="drop-new-items">Contact</a>
-                        </div>
-                        <div class="flex justify-content-between">
-                            <a href="#">
-                                <i class="bi bi-telephone-fill"></i>
-                                <span>+91 76651 67316</span>    
-                            </a>
-                            <a href="#">
-                                <i class="bi bi-envelope-fill"></i>
-                                <span>Enquire</span>
-                            </a>
-                        </div>
-                    </nav>
-
-                    <!-- ------------navbar 2 ------------ -->
-
-                    <nav class="main-nav d-flex justify-content-between ">
-                        <a href="/" class="d-flex ">
-                            <i class="bi bi-sunset-fill bojo-logo "></i>
-                            <span><h1>BOJO TRAVELS</h1></span>
-                        </a>
-
-                        <div class="d-flex justify-content-around menu-list">
-                            <a href="#" class="text-uppercase"><b>adventures</b></a>
-                            <a href="/gallery" class="text-uppercase"><b>Gallery</b></a>
-                            <a href="/booking"  class="text-uppercase">
-                                <b>Checkout</b>
-                                <i class="bi bi-cart-fill"></i>
-                            </a>
-                        </div>
-                        <div class="toggle-btn">
-                            <i class="bi bi-slack"></i>
-                        </div>
-                    </nav>
-
-                    <!--  -- drop down  -->
-                    <div class="dropdown_menu ">
-                        <a href="#" class="text-uppercase"><b>adventures</b></a>
-                        <a href="/gallery" class="text-uppercase"><b>Gallery</b></a>
-                        <a href="#"  class="text-uppercase">
-                            <b>Checkout</b>
-                            <i class="bi bi-cart-fill"></i>
-                        </a>
-                        <a href="#" class="text-uppercase"><b>about us</b></a>
-                        <a href="/contact" class="text-uppercase"><b>contact</b></a>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-
         <!-- ----------- text  --------------- -->
-        <div class="text-header position-absolute top-50 start-50 translate-middle">
-            <div class=" booking-element">
+        <div class="text-header position-absolute main-text row text-uppercase">
+            <div class=" col booking-element">
                 <div class="card text-uppercase ">
-                    <h1><span class="text-spam-blue">paragliding </span> in Bir Billing</h1>
-                    <div class="d-flex">
+                    <h1><span >paragliding in Bir Billing</span> </h1>
+                    <div class="rating-starts">
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
-                        <h3> based on 18  customer <a href="#"><b>reviews</b></a></h3>
                     </div> 
+                    <h1> based on 18  customer <a href="#"><b>reviews</b></a></h1>
                     <div>
-                        <a href=""><p> <b> Read More</b></p></a>
+                        <a href=""><b> Read More</b></a>
                     </div>                   
                 </div>
                 <div class=" margin-text mt-4 book-btn">
@@ -103,11 +41,11 @@
         </div>
 
         <!-- --------- Book tour  ---------- -->
-        <div class="container about-tour mt-5">
+        <section class=" about-tour mt-5">
 
-            <div class="row text-uppercase" >
+            <div class="row  text-uppercase" >
                 <!--  glimpse -->
-                <div class="col-8">
+                <div class="col glimpse">
                     <div>
                         <!-- overview -->
                         <div class="row">
@@ -236,7 +174,7 @@
                             <hr>
 
                             <!-- features -->
-                            <div>
+                            <div claas='booking-box'> 
                                 <ul>
                                     <li>no booking fees</li>
                                     <li>instant confirmation</li>
@@ -247,7 +185,7 @@
                             <hr>
 
                             <!-- calender -->
-                            <div>
+                            <div claas='booking-box'>
                                 <div>
                                     <div>
                                         <h4>Check Tour Availability</h4>
@@ -265,7 +203,7 @@
                             </div>
 
                             <!-- rate -->
-                            <div>
+                            <div claas='booking-box'claas='booking-box'>
                                 <div>
                                     <div>
                                         <h4>Rate</h4>
@@ -280,7 +218,7 @@
                             </div>
 
                             <!-- people -->
-                            <div>
+                            <div claas='booking-box'>
                                 <div>
                                     <h4>People</h4>
                                 </div>
@@ -288,27 +226,213 @@
                                     <div class="row">
                                         <div class="col-5"> 
                                             <label for="validationCustom05" class="form-label"><h5>Adults(14+)</h5></label>
-                                            <input type="number"  class="form-control" id="validationCustom05" required>
+                                            <input type="number"  class="form-control" id="validationCustom05" placeholder='1' required>
                                         </div>
-                                        <div class="col-md-5"> 
+                                        <div class="col-5"> 
                                             <label for="validationCustom05" class="form-label"><h5>Children(3-13)</h5></label>
-                                            <input type="number"  class="form-control" id="validationCustom05" required>
+                                            <input type="number"  class="form-control" id="validationCustom05" placeholder='0' required>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- booking done -->
-                        <div class=" margin-text mt-4 book-btn">
-
-                            <button type="submit" class="btn text-uppercase text-danger"><b> Book</b></button>
+                            <!-- Contact number -->
+                            <div claas='booking-box'>
+                                <div>
+                                    <div>
+                                        <h4>Contact Number</h4>
+                                    </div>
+                                    <div class="">
+                                        
+                                            <div class="input-group mb-3 inner-element">
+                                                <!-- <span class="" id="basic-addon1">@</span> -->
+                                                <i class="bi bi-telephone-plus input-group-text"></i>
+                                                <input type="number" class="form-control" id="contact-no" placeholder="+00 00000 00000" required>
+                                            </div>
+                                            <!-- <input type="text" > -->
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+
+                            <!-- mail -->
+                            <div claas='booking-box'>
+                                <div>
+                                    <div>
+                                        <h4>Email</h4>
+                                    </div>
+                                    <div class="">
+                                        
+                                            <div class="input-group mb-3 inner-element">
+                                                <!-- <span class="" id="basic-addon1">@</span> -->
+                                                <i class="bi bi-envelope-plus input-group-text"></i>
+                                                <input type="mail" class="form-control" id="email-id" placeholder="abc@mail.com">
+                                            </div>
+                                            <!-- <input type="text" > -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- booking done -->
+                            <div class='tour-final-amount mt-4 '>
+                                <div class='amount inner-element'>
+                                    <span id='amount'>₹1490</span>
+                                </div>
+                            </div>
+                            <div class='add-to-cart mt-4 d-flex'>
+                                <div class=" margin-text book-btn">
+                                    <button type="submit" class="btn  text-uppercase text-danger"><b> Send Enquiry</b></button>
+                                </div>
+                                <div class=" margin-text book-btn">
+                                    <button type="submit" class="btn  text-uppercase text-danger"><b> Add To Checkout</b></button>
+                                </div>
+                            </div>
+                        
                     </form>
                 </div>
             </div>
 
-        </div>
+        </section>
+
+
+
+        <!-- ------------- Reviews ---------------- -->
+        <section class="  bojo-container text-uppercase " id='review' >
+            <div class="heading">
+                <span >Paragliding Reviews</span>
+                {% comment %} <h1 >Source: Google Reviews</h1> {% endcomment %}
+            </div>
+            <div class="text-center box-container">
+                <div class="box">
+                    <div class="card p-4 ">
+                        <div  >
+                            <i class="bi bi-chat-right-quote-fill main_color " style="font-size: 50px;"> </i>
+                            <h3 class="card-title">Sikandar </h3>
+                        </div>
+                        <div class="card-body">
+                            <span class="card-text text-muted"><b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus officiis facilis numquam tenetur aperiam cum blanditiis velit est corporis pariatur explicabo culpa architecto ratione fugiat neque impedit. 👍</b></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="card p-4 ">
+                        <div  >
+                            <i class="bi bi-chat-right-quote-fill main_color " style="font-size: 50px;"> </i>
+                            <h3 class="card-title">Priyanka Kanwar</h3>
+                        </div>
+                        <div class="card-body">
+                            <span class="card-text text-muted"><b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus officiis. ♥️</b></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="card p-4">
+                        <div >
+                            <i class="bi bi-chat-right-quote-fill main_color " style="font-size: 50px;"> </i>
+                            <h3 class="card-title">Nikita</h3>
+                        </div>
+                        <div class="card-body">
+                            <span class="card-text text-muted"><b> We highly recommend Leben Travels And Tours. natural This  first to show that equal height action.</b></span>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </section>
+
+
+        <!-- ----------- flip cards about tours ----------- -->
+        <section class="bojo-container text-uppercase" >   
+            <div class="heading m-5">
+				<span class="">Releated Packages</span>
+				{% comment %} <h1 >Nature’s Wellness Dharamshala Packages</h1> {% endcomment %}
+			</div>
+
+            <div class="packages-elements column">
+                <!-- new cart -->
+                    <div class="box-container">
+                        <div class="box">
+                            <div class="card h-100">
+                                <figure>
+                                    <img src="../../static/media/images/slider_image1.jpeg" class="card-img-top" alt="...">
+                                    <div class="tour-price position-absolute">
+                                        <div class=" discount-price">
+                                            <span class="text-decoration-line-through">₹1200</span>
+                                            <span class="text-light">₹849</span>
+                                        </div>
+                                    </div>
+                                </figure>
+                                <div class="card-body">
+                                    <h3 class="card-title">Triund Trek</h3>
+                                    <span class="card-text">
+                                        Triund Trek is one of the most beautiful places for its lifestyle based on nature mainly. We have Eco-tourism is another attraction
+                                    </span>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                        <div class="col border-end"><i class="bi bi-stopwatch text-danger"></i> 2 Days</div>
+                                        <div class="col border-end "><i class="bi bi-hand-thumbs-up text-danger"></i> 4.3/5</div>
+                                        <div class="col "><a href="/booking" class="text-danger"><b>Read More</b></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="box">
+                            <div class="card h-100">
+                            <figure>
+                                <img src="../../static/media/images/slider_image1.jpeg" class="card-img-top" alt="...">
+                                <div class="tour-price position-absolute">
+                                    <div class=" discount-price">
+                                        {% comment %} <span class="text-decoration-line-through">₹3490</span> {% endcomment %}
+                                        <span class="text-light">₹890</span>
+                                    </div>
+                                </div>
+                            </figure>
+                                <div class="card-body">
+                                    <h3 class="card-title">Triund Trek</h3>
+                                    <span class="card-text">Triund Trek is one of the most beautiful places for its lifestyle based on nature mainly. We have Eco-tourism is another attraction.</span>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                    <div class="col border-end"><i class="bi bi-stopwatch text-danger"></i> 2 Days</div>
+                                    <div class="col border-end "><i class="bi bi-hand-thumbs-up text-danger"></i> 4.3/5</div>
+                                    <div class="col text-danger"><a href="/booking" class="text-danger"><b>Read More</b></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="box">
+                            <div class="card h-100">
+                                <figure>
+                                    <img src="../../static/media/images/slider_image1.jpeg" class="card-img-top" alt="...">
+                                    <div class="tour-price position-absolute">
+                                        <div class=" discount-price">
+                                            <span class="text-decoration-line-through">₹3490</span>
+                                            <span class="text-light">₹1490</span>
+                                        </div>
+                                    </div>
+                                </figure>
+                                <div class="card-body">
+                                    <h3 class="card-title">Triund Trek</h3>
+                                    <span class="card-text">
+                                        Triund Trek is one of the most beautiful places for its lifestyle based on nature mainly. We have Eco-tourism is another attraction.
+                                    </span>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                    <div class="col border-end"><i class="bi bi-stopwatch text-danger"></i> 2 Days</div>
+                                    <div class="col border-end "><i class="bi bi-hand-thumbs-up text-danger"></i> 4.3/5</div>
+                                    <div class="col text-danger"><a href="/booking" class="text-danger"><b>Read More</b></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    
 
 
     </div>

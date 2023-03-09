@@ -4,7 +4,6 @@ a{
 }
 .booking-element{
     margin: 0 9rem;
-    
     line-height: .6rem;
 }
 .booking-element .card{
@@ -15,21 +14,15 @@ a{
     color:var(--black-text) ;
     text-shadow: none;
 }
-.booking-element .card .d-flex{
+.booking-element .card .rating-starts{
+    display: flex;
     align-items: baseline;
 }
 .booking-element .card i{
     color: goldenrod;
-    margin-right: .2rem;
+    margin: .2rem;
+    font-size: 1.7rem;
 }
-.booking-element .card h3{
-    font-size: .9rem;
-}
-.booking-element .card p{
-    font-size: .7rem;
-}
-
-
 
 /* featuress */
 .booking-features .services-cards{
@@ -46,16 +39,15 @@ a{
 
 /* ------------- tour booking ---------------  */
 
-.about-tour{
-
-}
 .about-tour h3{
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: 600;
     color: rgb(0, 0, 0);
     margin-bottom: 2rem;
 }
-
+.about-tour {
+    font-size: 1.4rem;
+}
 .booking-sechedule .booking-calender-main{
     border: 1px solid var(--box-shadow);
     border-radius: .5rem;
@@ -65,12 +57,12 @@ a{
 }
 
 .booking-sechedule .booking-calender-main h4{
-    font-size: 1rem;
-    /* margin: 1rem 0; */
+    font-size: 1.7rem;
+    margin: 1rem 0;
 
 }
 .booking-sechedule .booking-calender-main h5{
-    font-size: .7rem;
+    font-size: 1.4rem;
     font-weight: 700;
 
 }
@@ -86,11 +78,35 @@ font-weight: 500;
 }
   
 .inner-element {
-    padding: .7rem;
+    padding: 1rem;
     border: 1px solid var(--box-shadow);
     border-radius: 1rem;
 }
 .book-btn button[type=submit]{
     border-radius: 1rem ;
-    border-color: var(--main-text);
+    padding: .2rem 1.4rem;
+    font-size: 1.2rem;
+    border-color: #fff;
+    color: #fff!important;
+    background-color: var(--main-text);
+}
+
+.booking-box{
+    margin-top: 1rem;
+}
+
+
+
+.add-to-cart{
+    justify-content: space-between;
+}
+
+.tour-final-amount .amount{
+    color: var(--secondary-text);
+    display: inline;
+    padding: .3rem 2rem;
+    font-weight: 600;
+    background: var(--box-shadow);
+
+    
 }
