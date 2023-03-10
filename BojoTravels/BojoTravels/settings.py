@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'bookingapp',
     'contactapp',
     'galleryapp',
+    'adventuresapp',
 ]
 
 MIDDLEWARE = [
