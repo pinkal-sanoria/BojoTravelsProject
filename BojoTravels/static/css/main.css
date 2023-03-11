@@ -1,6 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Poppins:wght@300;400;500;600;700;800&display=swap'); */
-
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Poppins:wght@300;400;500;600;700;800&family=Spectral:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Exo:wght@200;300;400&family=Poppins:wght@300;400;500;600;700;800&family=Spectral:wght@500&display=swap');
 :root {
   --main-text: rgb(5, 157, 159);
   --secondary-text: rgba(255, 30, 0, 0.749);
@@ -8,10 +6,15 @@
   --secondary-bg: rgba(183, 241, 255, 0.749);
   --bg-black: #070707c6;
   --box-shadow: rgba(0, 0, 0, 0.1);
+
+
+  --border-radius-1:.7rem;
+  --border-radius-2:.7rem;
+  --border-radius-3:.5rem;
 }
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: "Exo", sans-serif;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -25,6 +28,8 @@
 }
 
 body {
+  width: 100vw;
+  overflow: hidden;
 }
 html {
   font-size: 62.5%;
@@ -51,7 +56,7 @@ header {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: #222;
+  background: #222222c9;
   padding: 0.5rem 6%;
 }
 
@@ -107,7 +112,7 @@ nav {
   width: 200px;
   background: var(--box-shadow);
   backdrop-filter: blur(15px);
-  border-radius: 10px;
+  border-radius: var(--border-radius-2);
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -182,15 +187,16 @@ nav {
 }
 .main-text span {
   font-weight: bolder;
-  color: var(--main-text);
-  -webkit-text-stroke: 0.2rem #fff;
+  color: #fff;
+  -webkit-text-stroke: 0.1rem var(--main-text);
   font-size: 3rem;
+  /* text-shadow: 2px 4px 5px var(--secondary-text); */
 }
 
 .book-btn button {
-  border: 0.2rem solid var(--main-text);
+  border: 0.2rem solid #fff;
   border-radius: 5rem;
-  background: transparent;
+  background: var(--main-text);
   font-size: 1.7rem;
   padding: 1rem 3rem;
   color: rgb(255, 255, 255);
@@ -203,11 +209,13 @@ nav {
 
 /* ================== Features Home ============ */
 
-
+.card{
+  border-radius: var(--border-radius-2);
+}
 
 .bojo-container-home .box-container {
-  -webkit-columns: 6 15rem;
-  columns: 6 15rem;
+  -webkit-columns: 6 12rem;
+  columns: 6 12rem;
   -webkit-column-gap: 1.5rem;
   column-gap: 1.5rem;
 }
@@ -251,6 +259,9 @@ nav {
 }
 
 /* ============================== About tours Home Section ============================= */
+figure{
+  /* border-radius: var(--border-radius-2); */
+}
 .bojo-container .box-container .box span {
   font-size: 1.3rem;
 }
@@ -259,7 +270,10 @@ nav {
   /* margin: 0rem 0; */
   font-size: 1.8rem;
 }
+.about-tours img{
+  height: 30vh;
 
+}
 section {
   padding: 3rem 9%;
 }
@@ -271,7 +285,7 @@ section {
 }
 
 .bojo-container .box-container .box {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   -webkit-column-break-inside: avoid;
   break-inside: avoid;
 }
@@ -327,7 +341,14 @@ section {
 .reviews .card-body {
   padding: 1rem 1rem 1.8rem 1rem !important;
 }
-
+#review .box{
+  margin-bottom: 2rem;
+}
+#review .margin-text a{
+  border: 1px solid var(--secondary-text);
+  padding: .6rem;
+  border-radius: var(--border-radius-2);
+}
 .main_color {
   color: var(--main-text);
 }
@@ -395,12 +416,28 @@ section {
 
 
 
+/* ------------ advanture page ------------ */
+.details-advantures{
+  display: grid;
+  gap: 2rem;
+}
+.details-advantures .img-fluid{
+  height: 100%;
+  width: 100%;
+}
 
-
-
+.details-advantures .rounded-end .margin-text{
+  padding: .4rem 0;
+}
 
 @media screen and (max-width: 920px) {
 
+  html{
+    font-size: 68%;
+  }
+  .box{
+    margin-bottom: 2rem;
+  }
   .upper-nav span {
     display: none!important;
   }
@@ -422,10 +459,35 @@ section {
     -webkit-column-gap: 1.5rem;
     column-gap: 1.5rem;
   }
+  .bojo-container .box-container {
+    -webkit-columns: 1 25rem;
+    columns: 1 25rem;
+  }
+  .bojo-container-home .box-container {
+    -webkit-columns: 3 12rem;
+    columns: 3 12rem;
+  }
+  
+  .about-tour .row{
+    display: grid;
+  }
+  .about-tour .row .col-4{
+    width: 100%!important;
+    margin-top: 3rem;
+  }
+
+  
+  .advantur-book{
+    display: grid;
+  }
+  
 }
 
 
 @media (max-width: 576px) {
+  html{
+    font-size: 43.3%;
+  }
   .dropdown_menu {
     left: 2rem;
     width: unset;
@@ -433,11 +495,8 @@ section {
   .drop-new-items {
     display: none!important;
   }
-  .about-tour .row{
+  .details-advantures .rounded-end .tour-inclusions{
     display: grid;
-  }
-  .about-tour .row .col-4{
-    width: 100%!important;
-    margin-top: 3rem;
+    grid-template-columns: repeat(2,1fr);
   }
 }
