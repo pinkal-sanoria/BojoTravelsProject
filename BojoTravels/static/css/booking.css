@@ -50,7 +50,7 @@ a{
 }
 .booking-sechedule .booking-calender-main{
     border: 1px solid var(--box-shadow);
-    border-radius: .5rem;
+    border-radius: var(--border-radius-2);
     height: 70%;
     padding: 2rem;
     background-color: var(--secondary-bg);
@@ -80,10 +80,10 @@ font-weight: 500;
 .inner-element {
     padding: 1rem;
     border: 1px solid var(--box-shadow);
-    border-radius: 1rem;
+    border-radius: var(--border-radius-1);
 }
 .book-btn button[type=submit]{
-    border-radius: 1rem ;
+    border-radius: var(--border-radius-1) ;
     padding: .2rem 1.4rem;
     font-size: 1.2rem;
     border-color: #fff;

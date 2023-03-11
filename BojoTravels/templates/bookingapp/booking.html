@@ -20,7 +20,7 @@
                     </div>                   
                 </div>
                 <div class=" margin-text mt-4 book-btn">
-                    <button type="button" class="btn text-uppercase text-danger"><b> Book Now</b></button>
+                    <button type="button" class="btn text-uppercase "><b> Book Now</b></button>
                 </div>
             </div>
         </div>
@@ -255,10 +255,10 @@
                                     </div>
                                     <div class="">
                                         
-                                            <div class="input-group mb-3 inner-element">
+                                            <div class="input-group mb-3  inner-element">
                                                 <!-- <span class="" id="basic-addon1">@</span> -->
                                                 <i class="bi bi-envelope-plus input-group-text"></i>
-                                                <input type="mail" class="form-control" id="email-id" placeholder="abc@mail.com">
+                                                <input type="mail" class="form-control text-lowercase" id="email-id" placeholder="abc@mail.com">
                                             </div>
                                             <!-- <input type="text" > -->
                                     </div>
@@ -268,7 +268,7 @@
                             <!-- booking done -->
                             <div class='tour-final-amount mt-4 '>
                                 <div class='amount inner-element'>
-                                    <span id='amount'>₹{{ package.price }} Per Person</span>
+                                    <span id='amount'>₹{{ package.price }}/person</span>
                                 </div>
                             </div>
                             <div class='add-to-cart mt-4 d-flex'>
@@ -291,7 +291,7 @@
         <!-- ------------- Reviews ---------------- -->
         <section class="  bojo-container text-uppercase " id='review' >
             <div class="heading">
-                <span >Paragliding Reviews</span>
+                <span >{{ package.package_name }} Reviews</span>
                 {% comment %} <h1 >Source: Google Reviews</h1> {% endcomment %}
             </div>
             <div class="text-center box-container">
