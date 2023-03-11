@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Package(models.Model):
+    id = models.AutoField(primary_key=True)
     package_name = models.CharField(max_length=100,null=True,blank=True)
     cover_image = models.ImageField(upload_to='media/images/',null=True,blank=True)
     small_description = models.CharField(max_length=255)
