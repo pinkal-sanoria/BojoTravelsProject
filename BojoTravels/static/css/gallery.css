@@ -15,9 +15,9 @@ section {
   break-inside: avoid;
 }
 
-.gallery .box-container .box img {
+.gallery .box-container .box img ,video{
   width: 100%;
-  border-radius: 1rem;
+  border-radius: var(--border-radius-2);
   margin: 1rem 0;
 }
 

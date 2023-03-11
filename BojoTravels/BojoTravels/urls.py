@@ -24,4 +24,5 @@ urlpatterns = [
     path('',include('contactapp.urls')),
     path('',include('bookingapp.urls')),
     path('',include('galleryapp.urls')),
+    path('',include('adventuresapp.urls')),
 ]
