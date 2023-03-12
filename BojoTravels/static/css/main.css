@@ -110,6 +110,7 @@ nav {
   top: 60px;
   height: 0;
   width: 200px;
+  font-size: 2rem;
   background: var(--box-shadow);
   backdrop-filter: blur(15px);
   border-radius: var(--border-radius-2);
@@ -117,7 +118,7 @@ nav {
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .dropdown_menu.open {
-  height: 150px;
+  height: max-content;
 }
 .dropdown_menu a {
   padding: 0.7rem;
@@ -125,6 +126,12 @@ nav {
   color: var(--black-text);
   align-items: center;
   justify-content: center;
+}
+
+#footer i{
+  color: #fff;
+  font-size: 1.3rem;
+  margin-right: 1rem;
 }
 /* --------------  Scroll stuff ------------------- */
 /* .scroll-down header{
@@ -295,6 +302,7 @@ section {
   margin-bottom: 2rem;
 }
 
+
 .heading span {
   color: var(--main-text);
   font-size: 2rem;
@@ -430,6 +438,74 @@ section {
   padding: .4rem 0;
 }
 
+
+/* contact PAge  */
+.contact-page-info{
+  gap:2rem;
+}
+.contact-page-heading{
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.contact-page-heading span{
+  color: var(--main-text);
+  font-size: 2rem;
+
+}
+.contact-page-heading h1 {
+  font-size: 4rem;
+  color: var(--secondary-text);
+}
+.contact-page .box-container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+ 
+}
+.contact-page .box-container .box{
+  text-align: center;
+}
+.contact-page .contact-features .contact-icons{
+  margin: 2rem 0;
+
+}
+.contact-page .box-container i{
+  font-size: 3.3rem;
+  color: var(--main-text);
+  background-color: var(--secondary-bg);
+  padding: 1rem 1.5rem;
+  border-radius: 1000%;
+}
+.contact-page .box-container h4{
+  font-size: 1.2rem;
+}
+.needs-validation{
+  margin-top: 2rem;
+}
+.needs-validation label{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.needs-validation input{
+  padding: .7rem;
+}
+.needs-validation select{
+  padding: .7rem;
+}
+.about-contact p{
+  margin-top: .5rem!important;
+  font-size: 1.2rem;
+}
+.about-contact i{
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: black!important;
+}
+.about-contact i:hover{
+  cursor: pointer;
+}
+
+
 @media screen and (max-width: 920px) {
 
   html{
@@ -498,5 +574,9 @@ section {
   .details-advantures .rounded-end .tour-inclusions{
     display: grid;
     grid-template-columns: repeat(2,1fr);
+  }
+  .contact-page .box-container{
+    grid-template-columns: repeat(2,1fr);
+   
   }
 }

@@ -18,6 +18,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
+  <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
     <title>Home</title>
   </head>
@@ -29,19 +32,18 @@
               <!-- ------------navbar 1------------ -->
               <nav class="upper-nav d-flex justify-content-between  ">
                   <div class="d-flex ">
-                      <a href="#" >Terms and conditions</a>
-                      <a href="#">FAQ</a>
-                      <a href="#" class="drop-new-items">About us</a>
-                      <a href="/contact" class="drop-new-items">Contact</a>
+                      <a href="#footer" >Terms and conditions</a>
+                      
+                      <a href="#about" >About us</a>
                   </div>
                   <div class="flex justify-content-between">
                       <a href="#">
                           <i class="bi bi-telephone-fill"></i>
                           <span>+91 76651 67316</span>    
                       </a>
-                      <a href="#">
+                      <a href="#" >
                           <i class="bi bi-envelope-fill"></i>
-                          <span>Enquire</span>
+                          <span class='text-lowercase'>rrverma316@gmail.com</span>
                       </a>
                   </div>
               </nav>
@@ -50,16 +52,12 @@
 
               <nav class="main-nav d-flex justify-content-between ">
                   <a href='/'class="d-flex ">
-                      <i class="bi bi-sunset-fill bojo-logo "></i>
                       <span><h1>BOJO TRAVELS</h1></span>
                   </a>
                   <div class="d-flex justify-content-around menu-list">
                       <a href="/adventures" class="text-uppercase"><b>adventures</b></a>
                       <a href="/gallery" class="text-uppercase"><b>Gallery</b></a>
-                      <a href="/booking"  class="text-uppercase">
-                          <b>Checkout</b>
-                          <i class="bi bi-cart-fill"></i>
-                      </a>
+                      <a href="/contact"  class="text-uppercase"><b>Contact</b></a>
                   </div>
                   <div class="toggle-btn">
                       <i class="bi bi-slack"></i>
@@ -70,11 +68,6 @@
               <div class="dropdown_menu ">
                   <a href="/adventures" class="text-uppercase"><b>adventures</b></a>
                   <a href="/gallery" class="text-uppercase"><b>Gallery</b></a>
-                  <a href="#"  class="text-uppercase">
-                      <b>Checkout</b>
-                      <i class="bi bi-cart-fill"></i>
-                  </a>
-                  <a href="#" class="text-uppercase"><b>about us</b></a>
                   <a href="/contact" class="text-uppercase"><b>contact</b></a>
               </div>
           </div>
@@ -124,17 +117,22 @@
   </section>
   
     
-    <div class="card-footer bgfooter ">
+    <div class="card-footer bgfooter " id='footer'>
         <div class="text-light fs-6 p-2 container">
           <div class="row">
             <div class="col ps-0 text-muted">
               2023 Copyright. All Rights Reserved by bojotravels.
             </div>
-            <div class="col pe-0 text-end">
-              <i class="bi bi-whatsapp m-2"></i>
-              <i class="bi bi-instagram m-2"></i>
-              <i class="bi bi-facebook m-2"></i>
-              <i class="bi bi-youtube m-2"></i>
+            <div class="col pe-0 text-end ">
+                    <a href="#">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                    <a href="#">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="bi bi-facebook"></i>
+                    </a>
             </div>
           </div>
         </div>
@@ -144,9 +142,9 @@
     {% comment %} <script src=""></script> {% endcomment %}
     
     <!-- ------------------SCRIPTS --------------------- -->
-    <script src="../m"></script>
+    <script src='../../static/js/script.js'></script>
 
    
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    {% comment %} <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script> {% endcomment %}
 </html>
