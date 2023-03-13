@@ -205,41 +205,20 @@
                 </div>
             {% comment %} <div class="container "> {% endcomment %}
                 <div class="text-center box-container">
+                    {% for person in people %}
                     <div class="box mb-5">
                         <div class="card p-4 ">
                             <div  >
                                 <i class="bi bi-chat-right-quote-fill main_color " style="font-size: 50px;"> </i>
-                                <h3 class="card-title">Pinkal Sanoria</h3>
+                                <h3 class="card-title">{{ person.name }}</h3>
                             </div>
                             <div class="card-body">
-                                <span class="card-text text-muted"><b> I am Working with the travel company, specifically our travel planner, was fantastic. I truly recommend 👍</b></span>
+                                <span class="card-text text-muted"><b> {{ person.reviews }}</b></span>
                             </div>
                         </div>
                     </div>
-                    <div class="box mb-5">
-                        <div class="card p-4 ">
-                            <div  >
-                                <i class="bi bi-chat-right-quote-fill main_color " style="font-size: 50px;"> </i>
-                                <h3 class="card-title">Samir Singh</h3>
-                            </div>
-                            <div class="card-body">
-                                <span class="card-text text-muted"><b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus officiis facilis numquam tenetur aperiam cum blanditiis velit est corporis pariatur explicabo culpa architecto ratione fugiat neque impedit voluptatem, sed, iusto autem odit totam quam cumque nam. Temporibus excepturi esse distinctio ex qui omnis sint! This travel has supporting company as my Best travel agency ♥️</b></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="card p-4">
-                            <div >
-                                <i class="bi bi-chat-right-quote-fill main_color " style="font-size: 50px;"> </i>
-                                <h3 class="card-title">Rahul Verma</h3>
-                            </div>
-                            <div class="card-body">
-                                <span class="card-text text-muted"><b> We highly recommend Leben Travels And Tours. natural This  first to show that equal height action.</b></span>
-                            </div>
-                        </div>
-                    </div>
-                {% comment %} </div> {% endcomment %}
-            </div>
+                    {% endfor %}
+                </div>
         </section>
         
 
