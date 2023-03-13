@@ -1,8 +1,8 @@
 from django.shortcuts import render
-
-# Create your views here.
-from django.shortcuts import render
+from .models import Media
 
 # Create your views here.
 def gallery(request):
-    return render(request,'galleryapp/gallery.html')
+    media = Media.objects.all()
+    return render(request,'galleryapp/gallery.html',{'media': media})
+
