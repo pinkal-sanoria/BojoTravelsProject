@@ -94,13 +94,20 @@
                     </div>
 
                     <div>
-                        <form class="row g-3 needs-validation" >
-                            
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                        <form method="post" action="" class="row g-3 needs-validation" >
+                            {% csrf_token %}
                             <div class="col-md-6">
-                                <label for="validationCustom01" class="form-label">Your Name</label>
+                                <label for="name" class="form-label">Your Name</label>
                                 <div class="input-group has-validation">
                                     <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-person-fill"></i></span>
-                                    <input type="text" class="form-control" id="validationCustom01"  required>
+                                    <input type="text" class="form-control" id="name" name="name" required>
                                     
                                 </div>
                                 <div class="valid-feedback">
@@ -109,10 +116,10 @@
                             </div>
                             
                             <div class="col-md-6">
-                              <label for="exampleFormControlInput1" class="form-label">Email Address</label>
+                              <label for="email" class="form-label">Email Address</label>
                               <div class="input-group has-validation">
                                 <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-envelope-fill"></i></span>
-                                <input type="email" class="form-control text-lowercase" id="exampleFormControlInput1" aria-describedby="inputGroupPrepend" required>
+                                <input type="email" class="form-control text-lowercase" id="email" name="email" aria-describedby="inputGroupPrepend" required>
                                 <div class="invalid-feedback">
                                   Please provide your mail ID.
                                 </div>
@@ -120,10 +127,10 @@
                             </div>
 
                             <div class="col-md-6">
-                                <label for="validationCustom02" class="form-label">Contact Number</label>
+                                <label for="contact_number" class="form-label">Contact Number</label>
                                 <div class="input-group has-validation">
                                     <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-telephone-fill"></i></span>
-                                    <input type="number" class="form-control" id="validationCustom02" aria-describedby="inputGroupPrepend" required>
+                                    <input type="number" class="form-control" id="contact_number" name="contact_number" aria-describedby="inputGroupPrepend" required>
                                     <div class="invalid-feedback">
                                         Please provide your Contact No/Whatsapp.
                                     </div>
@@ -131,29 +138,31 @@
                             </div>
 
                             <div class="col-md-6">
-                                <label for="validationCustom04" class="form-label">Choose Category</label>
+                                <label for="category" class="form-label">Choose Category</label>
                                 <div class="input-group has-validation">
                                     <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-check-circle-fill"></i></span>
-                                    <select class="form-select" id="validationCustom04" required>
+                                    <select class="form-select" id="category" name="category" required>
                                         <option selected disabled value="">Choose Packages</option>
+                                        <option>Dharamshala</option>
+                                        <option>Triund Trek</option>
                                         <option>Paragliding</option>
                                         <option>Mcleodganj</option>
-                                        <option>Mcleodganj</option>
-                                        <option>Boating</option>
-                                        <option>Paragliding</option>
+                                        <option>Kareri Lake Trek</option>
+                                        <option>Indra Har</option>
+                                        <option>Lam Dal</option>
                                     </select>
                                 </div>
                             </div>
 
                             <div class="col-md-3">
-                              <label for="validationCustom05" class="form-label">Adults (14+)</label>
-                              <input type="number" class="form-control" id="validationCustom05" placeholder='1'>
+                              <label for="adults" class="form-label">Adults (14+)</label>
+                              <input type="number" class="form-control" id="adults" name="adults"  value='0'>
                               
                             </div>
                             <div class="col-md-3">
                                 
-                              <label for="validationCustom06" class="form-label">Childern(3-14)</label>
-                              <input type="number" class="form-control" id="validationCustom07" >
+                              <label for="children" class="form-label">Childern(3-14)</label>
+                              <input type="number" class="form-control" id="children" name="children"  value='0'>
                               
                             </div>
                             <div class='col-md-6'>
@@ -162,14 +171,14 @@
                                 <label for="my_date_picker1" class="form-label">select date</label>
                                 <div class="input-group has-validation">
                                     <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-calendar-week "></i></span>
-                                    <input type="text" class="form-control" id="my_date_picker1" placeholder="dd-mm-yyyy">
+                                    <input type="text" class="form-control" id="my_date_picker1" name="date" placeholder="yyyy-mm-dd">
                                 </div>
 
                             </div>
 
                             <div class='col-md-12'>
-                                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="3"></textarea>
                             </div>
                             <div class="col-12">
                               <div class="form-check">
@@ -184,7 +193,7 @@
                             </div>
                             <div class="col-12">
                                 <div class=" margin-text book-btn">
-                                    <button type="submit" class="btn  text-uppercase text-danger"><b> Send Enquiry</b></button>
+                                    <button type="submit"  value="Submit" class="btn  text-uppercase text-danger"><b> Send Enquiry</b></button>
                                 </div>
                             </div>
                         </form>
@@ -244,109 +253,6 @@
         </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        {% comment %} <div class=" text-center pb-5 " id="contact-section">
-            <p class="text-light fw-bold centered">Contact With Us</p>
-
-        </div>
-        <div class="container py-5">
-            <div class="row">
-                <div class="col col-md-12 col-lg-6 shadow p-5 mb-5 bg-body rounded">
-                    <p class="fs-2">Let's talk</p>
-                    {% if messages %}
-                        {% for message in messages %}
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                {{ message }}
-                            </div>
-                        {% endfor %}
-                    {% endif %}
-                    
-                    <form method="post" action="">
-                        {% csrf_token %}
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Full name</label>
-                            <input type="text" class="form-control" id="name" name="name"required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Phone</label>
-                            <input type="number" class="form-control" id="phone" name="phone" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email address</label>
-                            <input
-                                type="email"
-                                class="form-control"
-                                id="email"
-                                aria-describedby="emailHelp"
-                                name="email"
-                                required
-                            >
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Messages</label>
-                            <textarea
-                                class="form-control"
-                                rows="5"
-                                id="message"
-                                name="message"
-                            ></textarea>
-                        </div>
-                        <div class="text-end">
-                            <button type="submit"  value="Submit" class="btn btn-success end-0">Submit</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="col px-5">
-                    <div class="col">
-                        <div class="panel-widget-style panel-widget-style-for-229-1-0-0">
-                            <div class="so-widget-sow-editor so-widget-sow-editor-base">
-                                <div class="siteorigin-widget-tinymce textwidget pb-5">
-                                    <h1>Himalayan Heights&nbsp; Adventure</h1>
-                                    <h5>75 Mcleodganj, Dharamshala, Distt. Kangra,
-                                        <br>
-                                        Himachal Pradesh-176210 - INDIA
-                                    </h5>
-                                    <p>
-                                        <strong>Call</strong> : +91-8768868975 | +91-4543338754&nbsp; |+91-084533328
-                                    </p>
-                                    <p>
-                                        <strong>Email</strong> : bojoadventure@gmail.com
-                                        <br>
-                                        contact.bojoa@gmail.com
-                                    </p>
-                                    <p>
-                                        <strong>Web</strong> : bojodventure.com
-        
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div id="" class="z-depth-1-half map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3374.83414492182!2d76.3250603147896!3d32.235631981138866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b56d4dc504c89%3A0xb97ac53d5819d7ce!2sHimalayan%20Heights%20Adventure!5e0!3m2!1sen!2sin!4v1588006445424!5m2!1sen!2sin" frameborder="0"
-                              style="border:0; width: 100% !important; height: 25rem !important;" allowfullscreen></iframe>
-                          </div>
-                    </div>
-                </div>
-            </div>
-        </div> {% endcomment %}
-        {% comment %} <link rel="stylesheet" href="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"> {% endcomment %}
         
     
 {% endblock %}

@@ -51,7 +51,7 @@ $(document).ready(function() {
     $(function() {
         $("#my_date_picker1").datepicker({
             minDate:0,
-            dateFormat: "dd-mm-yy",
+            dateFormat: "yy-mm-dd",
             yearRange: "-100:+20",
             beforeShowDay: my_check
 

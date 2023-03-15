@@ -159,7 +159,15 @@
 
                 <!--  booking calender  -->
                 <div class="col-4 booking-sechedule">
-                    <form action="">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                    <form method="post" action="">
+                        {% csrf_token %}
                         <div class="booking-calender-main">
                             <div class="text-center">
                                 <h3>BOOK this tour</h3>
@@ -188,7 +196,7 @@
                                             <div class="input-group mb-3 inner-element">
                                                 <!-- <span class="" id="basic-addon1">@</span> -->
                                                 <i class="bi bi-calendar-week input-group-text"></i>
-                                                <input type="text" class="form-control" id="my_date_picker1" placeholder="dd-mm-yyyy">
+                                                <input type="text" class="form-control" name="date" id="my_date_picker1" placeholder="dd-mm-yyyy">
                                             </div>
                                             <!-- <input type="text" > -->
                                     </div>
@@ -199,10 +207,10 @@
                             <div claas='booking-box'claas='booking-box'>
                                 <div>
                                     <div>
-                                        <h4>Rate</h4>
+                                        <h4>Rate</h4> 
                                     </div>
                                 <div class="inner-element">
-                                        <select class="form-select" aria-label="Default select example">
+                                        <select class="form-select" id="tour_rate" name="tour_rate" aria-label="Default select example">
                                             <option selected>Standard</option>
                                             <option value="1">Private 4-7 pax</option>
                                         </select>
@@ -218,12 +226,12 @@
                                 <div>
                                     <div class="row">
                                         <div class="col-5"> 
-                                            <label for="validationCustom05" class="form-label"><h5>Adults(14+)</h5></label>
-                                            <input type="number"  class="form-control" id="validationCustom05" placeholder='1' required>
+                                            <label for="adults" class="form-label"><h5>Adults(14+)</h5></label>
+                                            <input type="number"  class="form-control" id="adults" name="adults" placeholder='1'  value='0'>
                                         </div>
                                         <div class="col-5"> 
-                                            <label for="validationCustom05" class="form-label"><h5>Children(3-13)</h5></label>
-                                            <input type="number"  class="form-control" id="validationCustom05" placeholder='0' required>
+                                            <label for="children" class="form-label"><h5>Children(3-13)</h5></label>
+                                            <input type="number"  class="form-control" id="children" name="children" placeholder='0'  value='0'>
                                         </div>
                                     </div>
                                 </div>
@@ -240,7 +248,7 @@
                                             <div class="input-group mb-3 inner-element">
                                                 <!-- <span class="" id="basic-addon1">@</span> -->
                                                 <i class="bi bi-telephone-plus input-group-text"></i>
-                                                <input type="number" class="form-control" id="contact-no" placeholder="+00 00000 00000" required>
+                                                <input type="number" class="form-control" id="contact_number" name="contact_number" placeholder="+00 00000 00000" required>
                                             </div>
                                             <!-- <input type="text" > -->
                                     </div>
@@ -258,7 +266,7 @@
                                             <div class="input-group mb-3  inner-element">
                                                 <!-- <span class="" id="basic-addon1">@</span> -->
                                                 <i class="bi bi-envelope-plus input-group-text"></i>
-                                                <input type="mail" class="form-control text-lowercase" id="email-id" placeholder="abc@mail.com">
+                                                <input type="mail" class="form-control text-lowercase" id="email" name="email" placeholder="abc@mail.com">
                                             </div>
                                             <!-- <input type="text" > -->
                                     </div>
@@ -273,11 +281,12 @@
                             </div>
                             <div class='add-to-cart mt-4 d-flex'>
                                 <div class=" margin-text book-btn">
-                                    <button type="submit" class="btn  text-uppercase text-danger"><b> Send Enquiry</b></button>
+                                    <button type="submit"  value="Submit" class="btn  text-uppercase text-danger"><b> Send Enquiry</b></button>
                                 </div>
-                                <div class=" margin-text book-btn">
+                                
+                                {% comment %} <div class=" margin-text book-btn">
                                     <button type="submit" class="btn  text-uppercase text-danger"><b> Add To Checkout</b></button>
-                                </div>
+                                </div> {% endcomment %}
                             </div>
                         
                     </form>
