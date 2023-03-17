@@ -352,82 +352,35 @@
             <div class="packages-elements column">
                 <!-- new cart -->
                     <div class="box-container">
-                        <div class="box">
+                        {% for package in packages %}
+                        <div class="box mb-5">
                             <div class="card h-100">
                                 <figure>
-                                    <img src="../../static/media/images/slider_image1.jpeg" class="card-img-top" alt="...">
+                                    <img src="../../static{{ package.cover_image.url }}" class="card-img-top" alt="...">
                                     <div class="tour-price position-absolute">
                                         <div class=" discount-price">
-                                            <span class="text-decoration-line-through">₹1200</span>
-                                            <span class="text-light">₹849</span>
+                                            <span class="text-decoration-line-through">₹1490</span>
+                                            <span class="text-light">₹{{ package.price }}</span>
                                         </div>
                                     </div>
                                 </figure>
                                 <div class="card-body">
-                                    <h3 class="card-title">Triund Trek</h3>
+                                    <h3 class="card-title">{{ package.package_name }}</h3>
                                     <span class="card-text">
-                                        Triund Trek is one of the most beautiful places for its lifestyle based on nature mainly. We have Eco-tourism is another attraction
+                                        {{ package.small_description }}
                                     </span>
                                 </div>
-                                <div class="card-footer">
+                                <div class="card-footer p-3">
                                     <div class="row">
-                                        <div class="col border-end"><i class="bi bi-stopwatch text-danger"></i> 2 Days</div>
-                                        <div class="col border-end "><i class="bi bi-hand-thumbs-up text-danger"></i> 4.3/5</div>
-                                        <div class="col "><a href="/booking" class="text-danger"><b>Read More</b></a></div>
+                                        <div class="col border-end"><i class="bi bi-stopwatch text-danger"></i> {{ package.days }} Days</div>
+                                        <div class="col border-end "><i class="bi bi-hand-thumbs-up text-danger"></i> {{ package.rating_out_of_5 }}/5</div>
+                                        <a href="/booking?package_id={{ package.id }}" class="btn pt-2 pb-2 text-uppercase text-danger"><b>Read More</b></a>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                         <div class="box">
-                            <div class="card h-100">
-                            <figure>
-                                <img src="../../static/media/images/slider_image1.jpeg" class="card-img-top" alt="...">
-                                <div class="tour-price position-absolute">
-                                    <div class=" discount-price">
-                                        {% comment %} <span class="text-decoration-line-through">₹3490</span> {% endcomment %}
-                                        <span class="text-light">₹890</span>
-                                    </div>
-                                </div>
-                            </figure>
-                                <div class="card-body">
-                                    <h3 class="card-title">Triund Trek</h3>
-                                    <span class="card-text">Triund Trek is one of the most beautiful places for its lifestyle based on nature mainly. We have Eco-tourism is another attraction.</span>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="row">
-                                    <div class="col border-end"><i class="bi bi-stopwatch text-danger"></i> 2 Days</div>
-                                    <div class="col border-end "><i class="bi bi-hand-thumbs-up text-danger"></i> 4.3/5</div>
-                                    <div class="col text-danger"><a href="/booking" class="text-danger"><b>Read More</b></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="box">
-                            <div class="card h-100">
-                                <figure>
-                                    <img src="../../static/media/images/slider_image1.jpeg" class="card-img-top" alt="...">
-                                    <div class="tour-price position-absolute">
-                                        <div class=" discount-price">
-                                            <span class="text-decoration-line-through">₹3490</span>
-                                            <span class="text-light">₹1490</span>
-                                        </div>
-                                    </div>
-                                </figure>
-                                <div class="card-body">
-                                    <h3 class="card-title">Triund Trek</h3>
-                                    <span class="card-text">
-                                        Triund Trek is one of the most beautiful places for its lifestyle based on nature mainly. We have Eco-tourism is another attraction.
-                                    </span>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="row">
-                                    <div class="col border-end"><i class="bi bi-stopwatch text-danger"></i> 2 Days</div>
-                                    <div class="col border-end "><i class="bi bi-hand-thumbs-up text-danger"></i> 4.3/5</div>
-                                    <div class="col text-danger"><a href="/booking" class="text-danger"><b>Read More</b></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>

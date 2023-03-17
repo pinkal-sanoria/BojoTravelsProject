@@ -14,7 +14,7 @@
                     <p >"let me discribe you dharamshala advantures"</p>
                 </div>
                 <div class=" margin-text mt-4 book-btn">
-                    <button type="button" class="btn text-uppercase "><b> Book Now</b></button>
+                    <button  type="button" class="btn text-uppercase "><b> Book Now</b></button>
                 </div>
             </div>
         </div>
@@ -148,7 +148,8 @@
 
         
         <!-- ------------------- gallery --------------- -->
-		<section class="gallery text-uppercase" id="gallery">
+
+		<section class="gallery text-uppercase" id="gallery ">
 
 			<div class="heading">
 				<span>our gallery</span>
@@ -156,42 +157,19 @@
 			</div>
 			
 			<div class="box-container">
+                {% for m in media %}
+				<div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+                    <video src="../../static{{ m.video.url }}" muted autoplay loop class="video"></video>
+					<span>travel spot</span>
+					<h3>{{ m.video_name }}</h3>
+				</div>
                 
-				<div class="box" data-aos="zoom-in-up" data-aos-delay="150">
-					<img src="../../static/media/images/slider_image1.jpeg" alt="">
-					<span>travel spot</span>
-					<h3>iceland</h3>
-				</div>
-                
-				<div class="box" data-aos="zoom-in-up" data-aos-delay="150">
-                    <video src="../../static/media/video/about-vid-3.mp4" muted autoplay loop class="video"></video>
-					<span>travel spot</span>
-					<h3>iceland</h3>
-				</div>
 				<div class="box" data-aos="zoom-in-up" data-aos-delay="300">
-					<img src="../../static/media/images/gallery-img-2.jpg" alt="">
+					<img src="../../static{{ m.image.url }}" alt="">
 					<span>travel spot</span>
-					<h3>greenland</h3>
+					<h3>{{ m.image_name }}</h3>
 				</div>
-
-				<div class="box" data-aos="zoom-in-up" data-aos-delay="450">
-					<img src="../../static/media/images/gallery-img-3.jpg" alt="">
-					<span>travel spot</span>
-					<h3>alaska</h3>
-				</div>
-
-				<div class="box" data-aos="zoom-in-up" data-aos-delay="150">
-					<img src="../../static/media/images/gallery-img-4.jpg" alt="">
-					<span>travel spot</span>
-					<h3>thailand</h3>
-				</div>
-
-				<div class="box" data-aos="zoom-in-up" data-aos-delay="300">
-					<img src="../../static/media/images/gallery-img-5.jpg" alt="">
-					<span>travel spot</span>
-					<h3>brazil</h3>
-				</div>
-
+                {% endfor %}
 			</div>
 
 		</section>

@@ -5,9 +5,11 @@ from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
 from contactapp.models import TourBooking
+from bookingapp.models import Package
 # Create your views here.
 
 def booking(request):
+    packages = Package.objects.all()
     package_id = request.GET.get('package_id')
     package = get_object_or_404(Package, id=package_id)
     
@@ -38,6 +40,6 @@ def booking(request):
         # return redirect(request,'bookingapp/booking.html', {'package': package})
     
     
-    return render(request,'bookingapp/booking.html', {'package': package})
+    return render(request,'bookingapp/booking.html', {'package': package,'packages':packages})
 
 
