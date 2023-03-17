@@ -113,7 +113,7 @@
                 <!-- new cart -->
                 {% comment %} <div class="container py-5"> {% endcomment %}
                     <div class="box-container">
-                        {% for package in packages %}
+                        {% for package in packages|slice:":3" %}
                         <div class="box mb-5">
                             <div class="card h-100">
                                 <figure>
@@ -140,7 +140,7 @@
                                 </div>
                             </div>
                         </div>
-                        {% endfor %}
+                        {% endfor %}                        
                     </div>
                 </div>
             </div>
@@ -157,7 +157,7 @@
 			</div>
 			
 			<div class="box-container">
-                {% for m in media %}
+                {% for m in media|slice:":8" %}
 				<div class="box" data-aos="zoom-in-up" data-aos-delay="150">
                     <video src="../../static{{ m.video.url }}" muted autoplay loop class="video"></video>
 					<span>travel spot</span>
